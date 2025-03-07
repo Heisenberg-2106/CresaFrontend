@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 25 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 25 100% 96%;
+    --accent-foreground: 25 100% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 25 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-secondary-900;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-semibold mb-4 text-secondary-900;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-2 rounded-md hover:bg-primary-600 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-900 text-white px-6 py-2 rounded-md hover:bg-secondary-800 transition-colors;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:border-primary-300 border-2 border-transparent;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-primary-600 to-primary-500;
+  }
+}
+
